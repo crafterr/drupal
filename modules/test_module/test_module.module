@@ -1,0 +1,16 @@
+<?php
+
+function test_module_entity_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+   // if ($build['#view_mode'] == 'full' && isset($build['an_additional_field'])) {
+
+    //  var_dump($build['#node']['type']); die();
+    //}
+}
+
+function test_module_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+    if ($entity->getEntityType()->id() == 'node') {
+        // echo 'weszlo'; die();
+        //CAUTION : Do not save here, because it's automatic.
+    }
+}
+?>
